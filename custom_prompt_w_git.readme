@@ -1,0 +1,12 @@
+To install this script you need bash-completion to be installed. In my case this was in:
+/usr/local/etc/bash_completion.d/
+
+# Drop in bash-completion support for git 
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o /usr/local/etc/bash_completion.d/git-completion.bash
+
+# Drop in git prompt functions
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o /usr/local/etc/bash_completion.d/git-prompt.sh
+
+# Update your ~/.bash_profile to load bash_completion and the custom prompt script
+source /usr/local/etc/bash_completion
+source ~/path-to/custom_prompt_w_git.sh
