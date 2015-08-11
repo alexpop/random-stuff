@@ -10,7 +10,7 @@
     $source = $_GET['source'];
   }
 
-  $file="hook.log";
+  $file="hook.txt";
   $contents = @file_get_contents('php://input');
   $request = date('Y-m-d H:i:s') . "     ,source=$source     ,REMOTE_ADDR=$_SERVER[REMOTE_ADDR]".
                                    "     ,CONTENT=" . prettyPrint( $contents ) . " \n\n";
