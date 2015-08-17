@@ -1,6 +1,6 @@
 <?php
   date_default_timezone_set('UTC');
-  $length=10000;
+  $length=50000;
   if (isset($_GET['length'])) {
     $length = $_GET['length'];
   }
@@ -12,8 +12,8 @@
 
   $file="hook.txt";
   $contents = @file_get_contents('php://input');
-  $request = date('Y-m-d H:i:s') . "     ,source=$source     ,REMOTE_ADDR=$_SERVER[REMOTE_ADDR]".
-                                   "     ,CONTENT=" . prettyPrint( $contents ) . " \n\n";
+  $request = date('Y-m-d H:i:s') . ",   REMOTE_ADDR=$_SERVER[REMOTE_ADDR],   SOURCE=$source".
+                                   ",   CONTENT=" . prettyPrint( $contents ) . " \n\n";
   echo "Wrote output to /$file base on GET parameters:<br /> source=$source<br /> length=$length";
 
   # Add the content at the beginning
