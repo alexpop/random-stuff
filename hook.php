@@ -1,4 +1,6 @@
 <?php
+  // Sample running here: http://apop.opschef.tv/hook.php?source=YOURNAME
+  // Output visible here: http://apop.opschef.tv/hook.txt
   date_default_timezone_set('UTC');
   $length=50000;
   if (isset($_GET['length'])) {
