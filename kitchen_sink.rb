@@ -55,8 +55,7 @@ nodes.find('*:*') { |n|
 
 puts "*** Successfully exported #{nodes_array.length} nodes from the Chef Server"
 
-# This posts data to the Chef Compliance(tested against 1.3.1)
-# Change these to fit your Chef Compliance server
+# Change these to fit your Chef Compliance server(tested against 1.3.1, 1.6.8)
 api_url = 'https://ap-cc6.opschef.tv'
 api_user = 'admin'
 api_pass = 'admin'
